@@ -1301,9 +1301,11 @@ section#testimonials {
 /********************Media queries tablette********************/
 
 @media screen and (max-width: 767px) {
+  /*formatage titre menu*/
   .menu_wrapper .menu_title {
     font-size: 1.8rem;
   }
+  /*resize image accueil*/
   .img-about .img_responsive {
     width: 90%;
   }
@@ -1316,6 +1318,7 @@ section#testimonials {
   .title-offer {
     width: 65%;
   }
+  /*resize image prestations*/
   .img-offer-1 .img_responsive,
   .img-offer-2 .img_responsive,
   .img-offer-3 .img_responsive,
@@ -1334,6 +1337,7 @@ section#testimonials {
   .cta-offer-contact {
     width: 40%;
   }
+  /*layout des avis en flexbox ligne*/
   .container_testimonials {
     flex-wrap: wrap;
   }
