@@ -1,0 +1,314 @@
+/*RESET*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*----------------------------------GENERAL----------------------------------*/
+
+:root {
+  --black: #03191e;
+  --black-2: #29383d;
+  --red: #dc2d2b;
+  --red2: #741d1b;
+  --grey: #e6e8e6;
+  --grey2: #4e4e4e;
+  --shadow-block: 0 0.2em 1em rgba(61, 48, 41, 0.2);
+  --shadow-img: 0 0.2em 1.2em rgb(61 48 41 / 10%);
+  --font-titre: "Lobster Two", cursive;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color: var(--black);
+  font-size: 16px;
+}
+
+ul,
+nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black);
+}
+
+/*----------------------------------HEADER----------------------------------*/
+header {
+  width: 100%;
+  height: 100px;
+}
+/*formatage de la navbar layout flexbox*/
+.navbar {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  margin: 0 auto;
+  background-color: #fff;
+  opacity: 0.95;
+  display: flex;
+  justify-content: space-between;
+  z-index: 12;
+}
+/*menu hamburger responsive non-affiché*/
+.menu_wrapper input[type="checkbox"],
+.menu_wrapper .hamburger-lines,
+.menu_wrapper .menu_title {
+  display: none;
+}
+.menu_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*menu layout flexbox en ligne*/
+.menu_items {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*resize du logo*/
+.navbar a img {
+  height: 90px;
+}
+/*formatage des liens du menu*/
+.topnav_link {
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--grey2);
+}
+/*effet hover rouge survol liens menu*/
+.topnav_link:hover {
+  color: var(--red2);
+}
+
+/*****footer*****/
+
+footer {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+/*bloc rouge coté gauche du footer*/
+footer::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 300px;
+  box-shadow: var(--shadow-block);
+  background-color: var(--red);
+  top: 1px;
+  left: 0;
+  z-index: -1;
+}
+/*layout footer flexbox en ligne*/
+.wrapper_footer {
+  width: 98%;
+  height: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--grey);
+  box-shadow: var(--shadow-block);
+}
+/*layout des contacts flexbox colonne*/
+.contact_footer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.title_contact_footer {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.text_contact_footer {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*lien ancre footer*/
+#list_contact_footer {
+  width: 100%;
+  height: 50%;
+  padding-left: 5rem;
+}
+/*formatage de la liste de contact*/
+.title_contact_footer h2 {
+  position: relative;
+  padding: 0.5rem 0 1rem 5rem;
+  text-transform: uppercase;
+  color: var(--black-2);
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+.text_contact_footer p {
+  padding-left: 5rem;
+  padding-bottom: 2rem;
+  color: var(--black-2);
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.1rem;
+}
+/*trait rouge sous titre footer*/
+.title_contact_footer h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color: var(--red2);
+  box-shadow: var(--shadow-block);
+  border-radius: 2px;
+  bottom: 8px;
+  left: 80px;
+}
+/*formatage liste contact footer*/
+#list_contact_footer ul li {
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+#list_contact_footer ul li i {
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--red2);
+}
+/*effet hover sur liens contact*/
+#list_contact_footer ul li a:hover {
+  color: var(--red2);
+}
+/*layout partie google map format flexbox colonne*/
+.localisation_footer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.localisation_footer .map_localisation {
+  max-width: 100%;
+  height: 80%;
+}
+.localisation_footer .mention_footer {
+  max-width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*menu situé sous la map*/
+.menu_footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+}
+/*formatage des liens du menu*/
+.menu_footer .menu_footer_link {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+/*effet hover lien menu footer*/
+.menu_footer .menu_footer_link:hover {
+  color: var(--red2);
+}
+/*formatge widget_mentions format flexbox*/
+.widget_mentions {
+  width: 98%;
+  height: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c5c9c5;
+  box-shadow: var(--shadow-block);
+}
+/*formatage ligne copyright et mentions legales*/
+.copyright {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.link_mention {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link_mention a {
+  font-size: 0.7rem;
+}
+.link_mention a:hover {
+  color: var(--red2);
+}
+
+/*****BLOC MENTIONS LEGALES*****/
+
+.modal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*layout du modal et mise en page*/
+.modal {
+  width: 100%;
+  max-width: 95%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--black-2);
+  font-family: "sans-serif";
+}
+/*formatage de la list-order*/
+.modal ol li {
+  padding-bottom: 0.2rem;
+  font-weight: 600;
+}
+.modal ol p {
+  text-align: left;
+  text-transform: lowercase;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+/*formatage du boutton de retour*/
+#close_modal {
+  margin-top: 3rem;
+  border: solid 2px var(--red2);
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--black-2);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+/*effet hover sur bouton fermeture modal*/
+#close_modal:hover {
+  background-color: var(--red2);
+  color: #fff;
+}
