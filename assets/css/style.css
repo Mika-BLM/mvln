@@ -578,6 +578,7 @@ section#offer {
 }
 .title-offer p {
   padding-bottom: 1rem;
+  padding-right: 1rem;
   font-size: clamp(0.8rem, 0.6916rem + 0.4819vw, 1rem);
   line-height: 1.7em;
   letter-spacing: 0.1em;
