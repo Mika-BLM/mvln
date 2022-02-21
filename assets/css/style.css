@@ -428,7 +428,7 @@ section#home::after {
 /*formatage lien réseau sociaux*/
 .social-link-home i {
   color: #fff;
-  font-size: clamp(1rem, 0.7rem + 1.3333vw, 1.7rem);
+  font-size: clamp(1.3rem, 1.1286rem + 0.7619vw, 1.7rem);
 }
 /*flexbox sur le bloc CTA*/
 .cta-home {
@@ -450,7 +450,28 @@ section#home::after {
 }
 .button-cta-decorator i {
   color: #fff;
-  font-size: clamp(1.3rem, 1.0857rem + 0.9524vw, 1.8rem);
+  font-size: 2rem;
+  animation: arrowMoveAndBack 4s infinite;
+}
+@keyframes arrowMoveAndBack {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(10px);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(+10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 .button-cta-link {
   height: 100%;
@@ -1006,6 +1027,7 @@ section#testimonials {
 .spacer_galery_image img:hover {
   transform: scale(1.1);
 }
+/******Responsive******/
 @media screen and (max-width: 991px) {
   section#home {
     height: auto;
@@ -1142,7 +1164,7 @@ section#testimonials {
   }
   /*rééquilibrage taille grid info*/
   .info-home {
-    grid-template-columns: 40% 40% 20%;
+    grid-template-columns: 37.5% 37.5% 25%;
   }
 
   /*bloc infos flexbox format ligne*/
@@ -1163,7 +1185,13 @@ section#testimonials {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
+  }
+  .button-cta-decorator {
+    border-radius: 3px 0 0 3px;
+  }
+  .button-cta-link {
+    border-radius: 0 3px 3px 0;
   }
   /*formatage de la card présentation*/
   .card-about-container {
@@ -1384,6 +1412,23 @@ section#testimonials {
   }
   .text-home p {
     padding-top: 2rem;
+  }
+  .info-home {
+    grid-template-columns: 42.5% 42.5% 15%;
+    grid-template-rows: auto;
+  }
+  .adress-home,
+  .schedule-home,
+  .social-link-home {
+    flex-direction: column;
+  }
+  .adress-home i,
+  .schedule-home i {
+    margin: 0;
+    padding-right: 0.2rem;
+  }
+  .social-link-home i {
+    padding-bottom: 0.5rem;
   }
   .card-about-container {
     margin-top: 3rem;
